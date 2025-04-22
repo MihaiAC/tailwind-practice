@@ -16,18 +16,18 @@ mkdir -p "$PROJECT_NAME" && cd "$PROJECT_NAME"
 
 # Install + init dependencies
 npm init -y
-npm install vite tailwindcss@3 postcss autoprefixer
-npx tailwindcss init -p
+npm install vite tailwindcss @tailwindcss/vite
 
-cat <<EOF > tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./**/*.html", "./src/**/*.js"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+# Create Vite configuration file
+cat <<EOF > vite.config.mjs
+import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+});
 EOF
 
 # Create images folder.
@@ -42,7 +42,6 @@ cat <<EOF > index.html
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind + Vite</title>
-    <link rel="preload" href="/src/style.css" as="style">
     <link rel="stylesheet" href="/src/style.css">
     <script type="module" src="/src/main.js" defer></script>
 </head>
@@ -54,9 +53,7 @@ EOF
 
 # Create src/style.css
 cat <<EOF > src/style.css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 EOF
 
 # Create src/main.js
@@ -67,4 +64,3 @@ npm pkg set scripts.dev="vite"
 
 # Print success message
 echo "Project '$PROJECT_NAME' created successfully!"
-
