@@ -6,10 +6,18 @@
   src: url("/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
-  font-variation-settings: "wght" 400, "slnt" 0;
 }
 
 @theme {
   --font-sans: "Inter", sans-serif;
   --color-acid-green: hsl(75, 94%, 57%);
+  --color-darkest-gray: hsl(0, 0%, 8%);
+  --color-mid-gray: hsl(0, 0%, 12%);
+  --color-low-gray: hsl(0, 0%, 20%);
+}
+
+@layer components {
+  .link-p {
+    @apply bg-low-gray py-2 rounded-md font-bold hover:bg-acid-green hover:text-black;
+  }
 }

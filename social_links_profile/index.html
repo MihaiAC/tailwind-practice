@@ -11,18 +11,29 @@
   <script type="module" src="/src/main.js" defer></script>
 </head>
 
-<body class="flex justify-center items-center h-screen bg-gray-700">
-  <h1 class="text-3xl font-bold text-blue-600">Are the styles working? :S</h1>
-  <p class="bg-acid-green">Yay</p>
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
+<body class="flex justify-center items-center h-screen bg-darkest-gray">
+  <section id="profile" class="container">
+    <div class="flex flex-col items-center bg-mid-gray max-w-[24rem] mx-auto text-white rounded-lg p-8 gap-4">
+      <img src="images/avatar-jessica.jpeg" alt="" class="rounded-full w-24">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-2xl font-bold">Jessica Randall</h1>
+        <p class="text-acid-green font-bold">London, United Kingdom</p>
+      </div>
 
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
+      <p class="text-sm">"Front-end developer and avid reader."</p>
+
+      <div class="flex flex-col w-full text-center gap-4">
+        <p class="link-p">GitHub</p>
+        <p class="link-p">Frontend Mentor</p>
+        <p class="link-p">LinkedIn</p>
+        <p class="link-p">Twitter</p>
+        <p class="link-p">Instagram</p>
+      </div>
+
+    </div>
+
+  </section>
+
 </body>
 
 </html>
