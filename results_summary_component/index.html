@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="/src/style.css" rel="stylesheet">
+  <title>Results summary component</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Your Result
-  76
-  of 100
+<body class="bg-pale-blue w-full h-screen flex flex-col items-center justify-start md:justify-center p-0 m-0">
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+  <div class="flex flex-col md:flex-row w-full md:max-w-2xl bg-white shadow-md rounded-2xl">
+    <div
+      class="flex flex-col items-center bg-linear-to-b from-slate-blue to-royal-blue rounded-b-2xl md:rounded-t-2xl md:w-1/2">
+      <h4 class="text-light-lavender font-bold pt-8 text-lg">Your Result</h4>
+      <div class="flex flex-col items-center bg-linear-to-b from-violet-blue to-persian-blue p-12 rounded-full my-4">
+        <h1 class="text-white font-extrabold text-5xl">76</h1>
+        <p class="text-light-lavender font-bold text-xs">of 100</p>
+      </div>
+      <h2 class="text-white text-2xl font-bold py-2">Great</h2>
+      <p class="text-light-lavender mx-auto max-w-2xs pb-16 text-center">You scored higher than 65% of the people who
+        have
+        taken these
+        tests.</p>
+    </div>
+    <div
+      class="flex flex-col gap-8 py-8 px-8 bg-white w-full md:w-1/2 md:rounded-r-2xl rounded-b-2xl md:rounded-bl-none">
+      <h5 class="text-left text-darkGrayBlue font-extrabold text-xl">Summary</h5>
 
-  Reaction
-  80 / 100
+      <div class="result-container bg-light-red-transparent">
+        <div class="result-container-title">
+          <img class="result-container-icon" src="images/icon-reaction.svg" alt="">
+          <p class="result-container-subject text-light-red">Reaction</p>
+        </div>
+        <div class="result-container-score">
+          <p class="text-darkGrayBlue">80</p>
+          <p>/</p>
+          <p>100</p>
+        </div>
+      </div>
 
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="result-container bg-orange-yellow-transparent">
+        <div class="result-container-title">
+          <img class="result-container-icon" src="images/icon-memory.svg" alt="">
+          <p class="result-container-subject text-orange-yellow">Memory</p>
+        </div>
+        <div class="result-container-score">
+          <p class="text-darkGrayBlue">92</p>
+          <p>/</p>
+          <p>100</p>
+        </div>
+      </div>
+      <div class="result-container bg-green-teal-transparent">
+        <div class="result-container-title">
+          <img class="result-container-icon" src="images/icon-verbal.svg" alt="">
+          <p class="result-container-subject text-green-teal">Verbal</p>
+        </div>
+        <div class="result-container-score">
+          <p class="text-darkGrayBlue">61</p>
+          <p>/</p>
+          <p>100</p>
+        </div>
+      </div>
+      <div class="result-container bg-cobalt-blue-transparent">
+        <div class="result-container-title">
+          <img class="result-container-icon" src="images/icon-visual.svg" alt="">
+          <p class="result-container-subject text-cobalt-blue">Visual</p>
+        </div>
+        <div class="result-container-score">
+          <p class="text-darkGrayBlue">73</p>
+          <p>/</p>
+          <p>100</p>
+        </div>
+      </div>
+      <button type="button"
+        class="py-4 text-white font-bold text-lg rounded-full bg-darkGrayBlue hover:bg-linear-to-b hover:from-slate-blue hover:to-royal-blue">
+        Continue
+      </button>
+    </div>
   </div>
 </body>
+
 </html>
