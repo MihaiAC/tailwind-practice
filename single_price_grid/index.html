@@ -10,32 +10,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="flex flex-col items-center justify-center w-full h-screen">
-    <div class="grid grid-cols-1 md:grid-rows-2 md:grid-cols-2">
-        <div class="col-span-2">
-            <h1>Join our community</h1>
-            <h2>30-day, hassle-free money back guarantee</h2>
-            <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers
-                who are serious about honing their skills.</p>
-        </div>
-        <div>
-            <h2>Monthly Subscription</h2>
+<body class="flex flex-col items-center justify-center w-full h-screen bg-light-gray">
+    <div class="grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden shadow-xl m-8">
+        <div class="flex flex-col md:col-span-2 bg-white space-y-6 p-8">
+            <h1 class="text-xl font-bold text-cyan">Join our community</h1>
+            <h2 class="font-bold text-yellow">30-day, hassle-free money back guarantee</h2>
             <div>
-                <h1>$29</h1>
-                <p>per month</p>
+                <p class="text-grayish-blue">Gain access to our full library of tutorials along with expert code
+                    reviews.
+                </p>
+                <p class="text-grayish-blue">Perfect for any
+                    developers
+                    who are serious about honing their skills.</p>
+            </div>
+
+        </div>
+        <div class="bg-cyan text-white flex flex-col space-y-4 p-8">
+            <h2 class="text-lg font-bold">Monthly Subscription</h2>
+            <div class="flex space-x-4 items-center">
+                <h1 class="text-3xl font-bold">$29</h1>
+                <p class="text-light-gray text-sm">per month</p>
             </div>
             <p>Full access for less than $1 a day</p>
-            <button>Sign Up</button>
+            <button type="button" class="bg-yellow shadow-md py-2 rounded-md">Sign Up</button>
         </div>
-        <div>
-            <h1>Why Us</h1>
-            <p>Tutorials by industry experts</p>
-            <p>Peer & expert code review</p>
-            <p>Coding exercises </p>
-            <p>Access to out GitHub repos</p>
-            <p>Community forum</p>
-            <p>Flashcard decks</p>
-            <p>New videos every week</p>
+        <div class="flex flex-col space-y-4 bg-lighter-cyan text-white p-8">
+            <h1 class="font-bold text-lg">Why Us</h1>
+            <div>
+                <p>Tutorials by industry experts</p>
+                <p>Peer & expert code review</p>
+                <p>Coding exercises </p>
+                <p>Access to out GitHub repos</p>
+                <p>Community forum</p>
+                <p>Flashcard decks</p>
+                <p>New videos every week</p>
+            </div>
+
         </div>
     </div>
 </body>
